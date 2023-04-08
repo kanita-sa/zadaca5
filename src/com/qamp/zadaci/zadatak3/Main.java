@@ -1,4 +1,4 @@
-package Zadatak3;
+package com.qamp.zadaci.zadatak3;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,11 +1,9 @@
-package Zadatak3;
+package com.qamp.zadaci.zadatak3;
 
 public class Complex {
-    //Attributes
     private int realPart;
     private int imaginaryPart;
 
-    //Constructors
     public Complex(){
         this.realPart = 0;
         this.imaginaryPart = 0;
@@ -15,7 +13,6 @@ public class Complex {
         this.imaginaryPart = imaginaryPart;
     }
 
-    //Getters
     public int Re(){
         return this.realPart;
     }
@@ -23,18 +20,11 @@ public class Complex {
         return this.imaginaryPart;
     }
 
-    //Methods
     public Complex add(Complex z){
-         int zOfRe = z.Re();
-         int zOfIm = z.Im();
-         Complex adding = new Complex(this.realPart+zOfRe, this.imaginaryPart+zOfIm);
-         return adding;
+         return new Complex(this.realPart+z.Re(), this.imaginaryPart+z.Im());
     }
     public Complex subtract(Complex z){
-        int zOfRe = z.Re();
-        int zOfIm = z.Im();
-        Complex subtracting = new Complex(this.realPart-zOfRe, this.imaginaryPart-zOfIm);
-        return subtracting;
+        return new Complex(this.realPart-z.Re(), this.imaginaryPart-z.Im());
     }
 
     public void printComplex(){

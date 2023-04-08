@@ -1,6 +1,4 @@
-package zadatak1;
-
-import com.sun.source.tree.ReturnTree;
+package com.qamp.zadaci.zadatak1;
 
 public class CoffeeMaker {
     private int water;
@@ -8,7 +6,6 @@ public class CoffeeMaker {
     private int milk;
     private boolean isOn;
 
-    //Constructors
     public CoffeeMaker(final int water, final double coffee){
         this.water = water;
         this.coffee = coffee;
@@ -19,7 +16,6 @@ public class CoffeeMaker {
         this.milk = milk;
     }
 
-    //Getters
     public int getWater() {
         return water;
     }
@@ -31,8 +27,6 @@ public class CoffeeMaker {
     }
     public boolean GetIfOn() {return isOn;}
 
-
-    //setters
     public void setWater(final int water){
         this.water = water;
     }
@@ -46,21 +40,18 @@ public class CoffeeMaker {
         this.isOn = isOn;
     }
 
-
-    //Methods
     public String makeEspresso(){
-        if(isOn == true){
-        this.water = this.water - 50;
-        this.coffee = this.coffee - 18.5;
-        return "Here is your Espresso!";
+        if(isOn){
+            this.water = this.water - 50;
+            this.coffee = this.coffee - 18.5;
+            return "Here is your Espresso!";
         }
         else{
             return "Please turn the Coffee Maker on";
         }
     }
-
     public String makeLatte(){
-        if(isOn == true) {
+        if(isOn) {
             this.water = this.water - 150;
             this.coffee = this.coffee - 18.0;
             this.milk = this.milk - 50;
@@ -70,10 +61,8 @@ public class CoffeeMaker {
             return "Please turn the Coffee Maker on";
         }
     }
-
-    public void setOn(){
+    public void turnOn(){
         isOn = true;
-        System.out.println("The coffee machine is now: On");
     }
 
 
